@@ -1,6 +1,8 @@
 // Constants
 const generateBtn = document.querySelector("#generate");
 
+
+
 // Functions
 
 /**
@@ -25,12 +27,16 @@ function generatePassword() {
   let specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '<', '>', '/', '?'];
 
 
-  let children = lowercaseLetters.concat(uppercaseLetters, numbers, specialCharacters);
+
+
+
+
+  
 
 
   // Password is currently blank! We need to make a better one
   let password = "";
-
+  
   let passwordLength = prompt("How long do you want your password to be?");
 
 
@@ -47,7 +53,11 @@ let confirmSpecialCharacters = confirm("Do you want to use special characters?")
     let Characters = prompt ("What special characters?");
 
 
-  console.log(passwordLength, confirmUppercase, confirmLowercase, confirmNumbers, confirmSpecialCharacters);
+  let passwordChar = ["lowecaseLetters","uppercaseLetter","numbers","specialCharacters"]
+
+  for(let i = 0; i < passwordChar.length; i++){
+    console.log("Your password is" + passwordChar[i]);
+  }
 
 
 
