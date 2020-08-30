@@ -4,6 +4,7 @@ const generateBtn = document.querySelector("#generate");
 
 
 // Functions
+
 let lowercaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 let uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -26,21 +27,18 @@ function writePassword() {
 
 function generatePassword() {
 
-  
 
 
-
-
-  
 
 
   // Password is currently blank! We need to make a better one
   let password = "";
-  
+
   let passwordLength = prompt("How long do you want your password to be?");
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Choose lenghth between 8 and 128 characters!");
   }
+
 
   let confirmUppercase = confirm("Do you want to use upper case letters?");
   let uppercase = prompt("What uppercase letters?");
@@ -50,14 +48,14 @@ function generatePassword() {
 
   let confirmNumbers = confirm("Do you want to use numbers?");
   let whatNumbers = prompt("What numbers?");
-  
-let confirmSpecialCharacters = confirm("Do you want to use special characters?");
-    let Characters = prompt ("What special characters?");
+
+  let confirmSpecialCharacters = confirm("Do you want to use special characters?");
+  let Characters = prompt("What special characters?");
 
 
-  let passwordChar = ["lowecaseLetters","uppercaseLetter","numbers","specialCharacters"]
+  let passwordChar = ["lowecaseLetters", "uppercaseLetter", "numbers", "specialCharacters"]
 
-  for(let i = 0; i < passwordChar.length; i++){
+  for (let i = 0; i < passwordChar.length; i++) {
     console.log("Your password is" + passwordChar[i]);
   }
 
@@ -65,7 +63,6 @@ let confirmSpecialCharacters = confirm("Do you want to use special characters?")
 
 
 
-  
 
 
 
@@ -75,7 +72,8 @@ let confirmSpecialCharacters = confirm("Do you want to use special characters?")
 
 
 
-return password;
+
+  return password;
 }
 
 // Main Process
